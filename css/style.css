@@ -217,10 +217,11 @@ body {
   display:none;flex-direction:column;z-index:20;
 }
 #photo-preview.show { display:flex }
-#preview-img { flex:1;object-fit:contain;width:100% }
+#preview-img { flex:1;object-fit:contain;width:100%;min-height:0 }
 .preview-form {
   background:rgba(13,7,0,.85);padding:14px 18px;
   display:flex;flex-direction:column;gap:10px;
+  overflow-y:auto;
 }
 .preview-form input,.preview-form select {
   width:100%;padding:10px 14px;border-radius:10px;
@@ -441,9 +442,9 @@ body {
 #toast.show { opacity:1;transform:translateX(-50%) translateY(0) }
 
 /* ══════════════════════════════════════
-   DESKTOP LAYOUT (≥ 768px)
+   DESKTOP LAYOUT (≥ 992px)
    ══════════════════════════════════════ */
-@media(min-width:768px) {
+@media(min-width:992px) {
   html,body { overflow:hidden;height:100vh }
 
   body {
@@ -466,6 +467,8 @@ body {
 
   /* ── Sidebar ── */
   .sidebar {
+    width: var(--sidebar-w);
+    flex-shrink: 0;
     display:flex !important;flex-direction:column;
     background:rgba(255,255,255,.78);
     backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);
@@ -553,6 +556,8 @@ body {
 
   /* ── Main area ── */
   .main-area {
+    flex: 1;
+    min-width: 0;
     display:flex !important;flex-direction:column;
     height:100vh;overflow:hidden;position:relative;
     background:rgba(255,255,255,.3);backdrop-filter:blur(4px);
