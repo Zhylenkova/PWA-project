@@ -36,6 +36,7 @@ Each saved place is automatically linked with its geographic location and displa
 ## 🖼️ Preview
 
 ![App Screenshot](./assets/preview.png)
+![App Screenshot](./assets/preview2.png)
 
 ---
 
