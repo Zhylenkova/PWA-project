@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
@@ -34,22 +34,22 @@
             <div class="sb-tagline">Local Food Explorer</div>
             <div class="sb-spot-count">
                 <div class="num" id="sb-count">0</div>
-                <div class="lbl">złapanych<br/>miejsc</div>
+                <div class="lbl">odkrytych<br/>miejsc</div>
             </div>
         </div>
 
         <nav class="sb-nav">
             <div class="sb-section-label">Nawigacja</div>
             <button class="sb-btn active" data-tab="camera" onclick="switchTab('camera')">
-                <i class="bi bi-camera-fill"></i>Złap posiłek
+                <i class="bi bi-camera-fill"></i>Dodaj miejsce
                 <span class="sb-dot" id="sbdot-camera"></span>
             </button>
             <button class="sb-btn" data-tab="map" onclick="switchTab('map')">
-                <i class="bi bi-map-fill"></i>Mapa odkryć
+                <i class="bi bi-map-fill"></i>Mapa lokali
                 <span class="sb-dot" id="sbdot-map"></span>
             </button>
             <button class="sb-btn" data-tab="guide" onclick="switchTab('guide')">
-                <i class="bi bi-journal-richtext"></i>Mój Dziennik
+                <i class="bi bi-journal-richtext"></i>Mój Przewodnik
                 <span class="sb-dot" id="sbdot-guide"></span>
             </button>
             
@@ -83,8 +83,8 @@
     <div class="main-area" style="display:none">
         <div class="page-header" id="page-header" style="display:none">
             <div class="page-header-left">
-                <h2 id="ph-title">Mój Dziennik</h2>
-                <p id="ph-sub">Twoje trofea</p>
+                <h2 id="ph-title">Mój Przewodnik</h2>
+                <p id="ph-sub">Twoja kolekcja kulinarnych odkryć</p>
             </div>
             <div class="page-header-right">
                 <div class="ph-gps" id="ph-gps">
@@ -102,7 +102,6 @@
         <div id="install-banner">
             <div class="ib-text">
                 <strong>Zainstaluj FoodCatcher</strong>
-                <span>Łap smaki z ekranu głównego</span>
             </div>
             <div class="ib-btns">
                 <button class="btn-install" id="btn-install-confirm">Instaluj</button>
@@ -147,7 +146,7 @@
             </div>
 
             <div class="cam-desktop-panel" style="display:none">
-                <h3>📸 Nowa zdobycz</h3>
+                <h3>📸 Nowe odkrycie</h3>
                 <div class="cam-gps-box">
                     <div class="lbl"><i class="bi bi-geo-alt-fill"></i>Lokalizacja</div>
                     <div class="val" id="cam-gps-val-d">Szukam sygnału…</div>
@@ -235,7 +234,7 @@
             <div class="map-empty" id="map-empty">
                 <i class="bi bi-map"></i>
                 <strong>Mapa jest pusta</strong>
-                <p style="font-size:.85rem;color:var(--ink-m)">Złap pierwszy lokal, aby pojawił się tutaj.</p>
+                <p style="font-size:.85rem;color:var(--ink-m)">Zrób zdjęcie, aby pojawić się na mapie.</p>
                 <button class="btn-amber" onclick="switchTab('camera')" style="border-radius:var(--r-sm)">
                     <i class="bi bi-camera-fill"></i>Włącz aparat
                 </button>
@@ -246,7 +245,7 @@
             <div class="guide-scroll">
                 <div class="guide-empty" id="guide-empty">
                     <i class="bi bi-journal-richtext"></i>
-                    <p><strong>Brak wpisów w dzienniku</strong><br/>Twoje kulinarne odkrycia pojawią się w tym miejscu.</p>
+                    <p><strong>Brak wpisów w dzienniku</strong><br/>Twoje odkrycia pojawią się w tym miejscu.</p>
                 </div>
                 <div class="filter-row" id="filter-row" style="display:none">
                     <div class="filter-chip active" data-filter="all" onclick="applyFilter(this)">🍴 Wszystkie</div>
@@ -308,6 +307,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
